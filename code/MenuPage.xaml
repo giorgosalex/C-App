@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App15.MenuPage"
+             xmlns:local="clr-namespace:App15;assembly=App15">
+
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu" >
+      <StackLayout Padding="10" >
+        
+        <StackLayout Orientation="Horizontal" HeightRequest="30" Padding="10" BackgroundColor="#D0D0D0" >
+          <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+          <Image Source="home_icon.png" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" />
+          <Label Text="Home" VerticalOptions="Center" HorizontalOptions="Center" />
+          <StackLayout HorizontalOptions="EndAndExpand"></StackLayout>
+          
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="HomePageRecognizer_OnTapped" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HeightRequest="30" Padding="10" BackgroundColor="#D0D0D0" >
+          <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+          <Image Source="folder_icon.png" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" />
+          <Label Text="Virtual Workspace" VerticalOptions="Center" HorizontalOptions="Center" />
+          <StackLayout HorizontalOptions="EndAndExpand"></StackLayout>
+
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="HomePageRecognizer_OnTapped" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HeightRequest="30" Padding="10" BackgroundColor="#D0D0D0" >
+          <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+          <Image Source="folder_icon.png" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" />
+          <Label Text="Data Catalogue" VerticalOptions="Center" HorizontalOptions="Center" />
+          <StackLayout HorizontalOptions="EndAndExpand"></StackLayout>
+
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="HomePageRecognizer_OnTapped" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HeightRequest="30" Padding="10" BackgroundColor="#D0D0D0" >
+          <StackLayout HorizontalOptions="StartAndExpand"></StackLayout>
+          <Image Source="folder_icon.png" WidthRequest="30" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" />
+          <Label Text="Messages" VerticalOptions="Center" HorizontalOptions="Center" />
+          <StackLayout HorizontalOptions="EndAndExpand"></StackLayout>
+
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="HomePageRecognizer_OnTapped" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+        
+      </StackLayout>
+    </ContentPage>
+  </MasterDetailPage.Master>
+
+  <MasterDetailPage.Detail>
+    <local:HomePage />
+  </MasterDetailPage.Detail>
+  
+</MasterDetailPage>
